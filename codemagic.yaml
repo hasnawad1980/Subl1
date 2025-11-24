@@ -1,0 +1,11 @@
+workflows:
+  android_debug_simple:
+    name: Android Debug APK (simple)
+    environment:
+      flutter: stable
+    scripts:
+      - script: flutter create .
+      - script: flutter pub get
+      - script: flutter build apk --debug
+    artifacts:
+      - build/app/outputs/flutter-apk/app-debug.apk
